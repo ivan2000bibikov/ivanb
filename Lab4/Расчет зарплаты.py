@@ -27,7 +27,7 @@ def get_salaries(tax=False):
     listbox = Listbox(width=100,height=10, selectmode=EXTENDED)
     listbox.grid(row=5,column=0, padx=5, pady=5)
     if tax:
-        [listbox.insert(0, f'{x} {get_payable_salaries(salaries[x])}') for x in salaries.keys()]
+       [listbox.insert(0, f'{x} сначала {salaries[x]} после  {get_payable_salaries(salaries[x])}') for x in salaries.keys()]
     else:
         [listbox.insert(0, f'{x} {salaries[x]}') for x in salaries.keys()]
 
